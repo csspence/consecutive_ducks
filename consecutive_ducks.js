@@ -20,13 +20,10 @@ Input >> Output Examples:
 */
 
 const consecutiveDucks = (num) => {
-  for(let i = 1; i < num.length; i++) {
-    console.log('you are in your OUTER loop');
+  for(let i = 1; i < num; i++) {
     let sum = 0;
-    for(let h = i; h < num.length; h++) {
-      console.log('you are in your INNER loop');
+    for(let h = i; h < num; h++) {
       sum += h;
-      console.log('here is sum: ' + sum);
       if(sum === num) {
         return true;
       }
