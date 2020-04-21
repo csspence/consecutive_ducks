@@ -19,6 +19,18 @@ Input >> Output Examples:
 * consecutiveDucks(42)  ==>  return (true) //  42 , could be expressed as a sum of ( 9 + 10 + 11 + 12 )  . 
 */
 
-function consecutiveDucks(num) {
-  // your code here
+const consecutiveDucks = (num) => {
+  for(let i = 1; i < num.length; i++) {
+    console.log('you are in your OUTER loop');
+    let sum = 0;
+    for(let h = i; h < num.length; h++) {
+      console.log('you are in your INNER loop');
+      sum += h;
+      console.log('here is sum: ' + sum);
+      if(sum === num) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
